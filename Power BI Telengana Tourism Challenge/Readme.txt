@@ -12,6 +12,15 @@ Insights & Suggestions : For the Insights & Suggestions please check the 'Insigh
 
 Pages : The Dashboard contains multiple pages for all the Queries ,Recommendations and Suggestion. The main Dashboard contain the details and visualizations about Domestic and Foreign Visitors.
 
+Population Estimate :
+
+# The data is taken from https://www.indiagrowing.com/Telangana
+# 2023 population - 2011 population =inc_popuation => 38472769   -   35286757=31,86,012
+# inc_population/2011 population =growth => 3186012   ÷   35286757 =0.0902891699568765
+#Growth*100/years = yearly growth percentage => 0.09 *100  ÷   11 =0.8181818181818182 =(0.8) percentage
+# (2011 population) *0.008 =yearly growth => 282294
+#lets assume its growing by 0.008 (0.8%) for 2019   35286757+8*(yearly growth)  => 35286757+2258352    =>37545109
+#lets assume its growing by 0.008 (0.8%) for 2025   35286757+14*(yearly growth)  => 35286757+3952116    =>39238873
 
 Additional Materials:
 
