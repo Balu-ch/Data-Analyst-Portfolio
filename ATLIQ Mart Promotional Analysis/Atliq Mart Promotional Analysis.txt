@@ -1,0 +1,94 @@
+Atliq Mart Promotional Analysis
+
+
+Overview
+
+AtliQ Mart is a retail giant with over 50 supermarkets in the southern region of India. All their 50 stores ran a massive promotion during the Diwali 2023 and Sankranti 2024 (festive time in India) on their AtliQ branded products. Now the sales director wants to understand which promotions did well and which did not so that they can make informed decisions for their next promotional period.
+
+
+Dataset: https://codebasics.io/challenge/codebasics-resume-project-challenge
+
+Live Dashboard: https://www.novypro.com/project/super-mart-sales-promotion-analysis-
+
+Process:
+
+1) First, the SQL dump was loaded into MYSQL.
+2) Understanding the columns and tables, evaluating data consistency and identifying missing values.
+3) After gaining a better understanding of the data, solutions were written for the ad hoc requests and requested insights in MySQL.
+4) Then, the data was imported into Power BI from the MYSQL database.
+5) Created the data model and DAX measures needed for the analysis.
+
+
+Constraints and Questions:
+We only have data for two campaigns, both happening around the Same Season in southern India but two months apart.
+We're not sure which products are included in the Combo, so we can't assess how it might affect other product promotions.
+Crucially,Without knowing our unit costs, we can't tell if we're making a profit or loss, and by how much.
+What is the budget for promotional costs (including freebies, cashback, and discounts)?
+
+The analysis followed this hierarchy: Campaign -> City -> Stores -> Category -> Promotion -> Product.
+
+
+Metrics:
+
+Incremental Revenue (IR): The increase in revenue from before and after promotion.
+Incremental Revenue% (IR%): Incremental revenue compared to revenue before promotion.
+Incremental Sales Quantity (ISU): The increase in quantity from before and after promotion.
+Incremental Sales Quantity % (ISU%): Incremental quantity compared to quantity before promotion.
+Promotional Cost (PC): The Revenue used for promotion, including freebies and discounts.
+ROI (Return on Investment): The Revenue gain from the Promotion.
+
+
+Insights:
+
+Diwali campaign had a higher order value (HOV) compared to Sankranti, which had the highest sales quantity.
+Diwali best performers based on revenue: Combo1, Home Appliances.
+Sankranti best performers based on revenue: Grocery & Staples, Home Appliances.
+
+Cities with a higher number of stores have higher sales quantity and revenue, so we need to consider the incremental percentages for both revenue and quantity.
+The non-percentage-based promotion types have higher sales in both quantity and revenue in both campaigns.
+
+Personal care is the least preferred category in both campaigns; we need to reconsider the strategy for personal care.
+Changing the pricing strategy worked for groceries and staples.
+The promotional type '25% OFF' is not effective for either campaign.
+
+The cost-cutting is coming from grocery and staples for the Sankranti campaign (e.g., Grocery).
+If the discount % is less, there is a decrease in sales (e.g., Personal Care items).
+
+Additional Insights:
+
+59.2% of sales IR are coming from 25 stores which are in the top 3 Cities (Bengaluru, Chennai, Hyderabad).
+Cities like Madurai, Mysore are in the top 5 in AVG ISU per store, AVG IR per store rankings even with only 4 stores.
+Cities with fewer stores (Vijayawada, Trivandrum, Mangalore) had the lowest rankings in Avg ISU per sore and Avg IR per store.
+
+
+Product Performance:
+
+	GOOD:
+	Combo1 was highly sought after in the Diwali campaign but experienced a drastic drop in sales during the Sankrati campaign.
+	Chakki_Atta and Sun_Flower_Oil both saw an increase in sales quantity and revenue due to updated prices for Sankranti (25% off changed to BOGOF).
+
+	SAME:
+	Atliq_curtains and Double_BedSheet_set from Homecare performed equally well in both campaigns with the BOGOF promotion.
+
+	BAD:
+	Masoor_dal (1kg) and Sonamasuri_Rice (10kg) in Grocery & Staples showed a positive ISU, but their IR values were negative, attributed to the BOGOF promotion.
+	All products in Personal Care, Sponge_for_Dishwash and Container_set in Homecare, neither showed a positive ISU nor IR values, as they were part of either the 25% off or 50% off promotion types.
+
+Recommendations:
+
+Focus on High-Impact Expansion: Prioritize cities like Madurai and Mysore with high Avg ISU /IR per store, while maintaining efforts in top revenue-generating cities for optimal growth.
+
+Maximize Revenue: Capitalize on consistently performing categories like Home Appliances and Combos by offering cross-promotions and exploring alternative strategies for underperforming categories like Personal Care.
+
+Optimize Underperforming Categories and Products:
+Revisit the Personal Care strategy to explore different product bundles, introduce new brands, and launch targeted marketing campaigns to improve performance.Ensure cost-cutting measures products like Masoor_dal and Sonamasuri_Rice  don't negatively impact IR, as seen with some BOGOF promotions.
+
+
+Enhance Pricing Competitiveness:
+Implement dynamic pricing to adjust prices based on market conditions, improving competitiveness. However, it requires transparent communication and strategy to avoid potential negative customer perception.
+
+
+Optimize Campaign Performance:
+Refine BOGOF promotions for specific products and consider alternatives like cashbacks or strategic price adjustments in place of ineffective "25% OFF" promotions.
+
+-- THANK YOU --
